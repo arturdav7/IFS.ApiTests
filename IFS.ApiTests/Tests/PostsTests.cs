@@ -93,6 +93,7 @@ namespace IFS.ApiTests.Tests
             var statusCode = await Client.DeleteAsync("/posts/1");
 
             Assert.That(statusCode, Is.EqualTo(HttpStatusCode.OK));
+
         }
     }
 }
