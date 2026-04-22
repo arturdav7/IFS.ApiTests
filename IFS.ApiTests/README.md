@@ -12,8 +12,7 @@ IFS.ApiTests/
 │   ├── ApiSettings.cs          # Settings model
 │   └── ConfigurationHelper.cs  # Loads appsettings.json
 ├── Models/
-│   ├── Post.cs
-│   └── Comment.cs
+│   └── Post.cs
 ├── Tests/
 │   ├── BaseTest.cs             # Shared setup and teardown
 │   └── PostsTests.cs           # All /posts test cases
@@ -41,4 +40,6 @@ Base URL is configured in appsettings.json and can be changed without touching t
 
 GET /posts - 200 OK, count = 100, field validation
 GET /posts/{id} - correct post returned, 404 for non-existent id
-POST /posts - 2
+POST /posts - 201 Created, response matches submitted data
+PUT /posts/{id} - 200 OK, response contains updated values
+DELETE /posts/{id} - 200 OK
