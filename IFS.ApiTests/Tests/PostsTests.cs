@@ -19,7 +19,7 @@ namespace IFS.ApiTests.Tests
         {
             var (_, posts) = await Client.GetAsync<List<Post>>("/posts");
 
-            Assert.That(posts!.Count, Is.EqualTo(100));
+            Assert.That(posts!, Has.Count.EqualTo(100));
         }
 
         [Test]
